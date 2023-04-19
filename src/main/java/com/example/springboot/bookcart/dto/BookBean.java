@@ -1,10 +1,7 @@
 package com.example.springboot.bookcart.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Generated;
 
@@ -16,7 +13,7 @@ import java.util.Date;
 public class BookBean {
     @Column
     @Id
-    @Generated
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int bookID;
     @Column
     private String title;
